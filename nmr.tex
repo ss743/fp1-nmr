@@ -5,7 +5,7 @@
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[german]{babel}
+\usepackage[ngerman]{babel}
 \usepackage{amsmath,amssymb,amstext}
 \usepackage{hyperref}
 \usepackage{cancel}
@@ -47,9 +47,9 @@
 \cfoot{}
 \rfoot{}
 
-\title{\vspace{0cm}{\Huge Fortgeschrittenen-Praktikum I:\\ \vspace{1cm} Nuclear Magnetic Resonance}}
+\title{\vspace{0cm}{\Huge Fortgeschrittenen-Praktikum I:\\ \vspace{1cm} Kernspinresonanz}}
 \author{Saskia Bondza\\Simon Stephan}
-\date{performed on 15.09.2016 and 16.09.2016}
+\date{durchgeführt am 15.09.2016}
 
 \pretitle{%
   \begin{center}
@@ -60,13 +60,24 @@
 
 %neue Commands----------------------------------------------------------------------------------------------------------
 \newcommand{\nab}{\vec{\nabla}} %direkter Befehl mit Vektorpfeil
-\newcommand{\gra}[2]{
-	\begin{minipage}{\textwidth}
+\newcommand{\gra}[3][0.7]{
+	\begin{minipage}[h!]{\textwidth}
 		\centering
-		\includegraphics[width=0.7\textwidth]{figures/#1.png}
-		\captionof{figure}{#2}
+		\includegraphics[width=#1\textwidth]{figures/#2.png}
+		\captionof{figure}{#3}
 	\end{minipage}
-	}
+	\vskip 30 pt
+}
+\newcommand{\graTwo}[4][0.5]{
+	\begin{minipage}[h!]{\textwidth}
+		\centering
+		\includegraphics[width=#1\textwidth]{figures/#2.png}
+		\includegraphics[width=#1\textwidth]{figures/#3.png}
+		\captionof{figure}{#4}
+	\end{minipage}
+	\vskip 30 pt
+}
+\newcommand{\code}[1]{\texttt{#1}}
 
 
 %Titel,Inhalt----------------------------------------------------------------------------------------------------------
@@ -84,47 +95,73 @@
 \pagenumbering{arabic} %verstecke Seitenzahl
 \section{Einleitung}
 
-%The aim of this experiment is to determine the gyromagnetic ratio of the proton in Hydrogen as well as in Glycol. Furthermore we want to measure the nuclear magnetic moment of $^{19}F$ and the proton resonance frequency of a Hydrogen sample. An additional measurement to confirm the homogeneity of the magnetic field involved in this experiment is also performed using a Hall effect sensor. 
-
-%In this experiment we analyze nuclear magnetic resonance. Nuclear magnetic resonance is a method which uses the Zeeman effect to measure the gyromagnetic ratio of particles. We use it in this experiment to determine the gyromagnetic ratio of the proton in Hydrogen as well as in Glycol. Furthermore we want to measure the nuclear magnetic moment of $^{19}F$ and the proton resonance frequency of a Hydrogen sample. Additionally we analyze the magnetic field involved in this experiment with a Hall effect sensor to confirm its homogeneity.
-
 In diesem Versuch untersuchen wir Kernspinresonanz. Dieser Effekt beruht auf dem Zeeman-Effekt und beschreibt das Umklappen von Kernspins in einem Magnetfeld unter Absorption oder Emission von Photonen. Wir benutzen die Kernspinresonanz um das gyromagnetische Verhältnis des Protons einmal in Wasserstoff und einmal in Glykol zu bestimmen. Anschließend messen wir das kernmagnetische Moment von $^{19}$F und die Protonenresonanzfrequenz von Wasserstoff. Außerdem untersuchen wir das in diesem Versuch benutzte magnetische Feld mit einer Hall-Sonde, um dessen Homogenität zu bestätigen.
 
 
 \newpage
 \section{Theoretische Grundlagen}
+In diesem Kapitel haben wir uns weitgehend an \cite{anleitung} orientiert.
 \subsection{Spin und Kernspin}
+Eine wichtige Eigenschaft quantenmechanischer Elementarteilchen ist ihr Spin. Dieser beschreibt, halbklassisch gesehen, die Rotation eines Teilchens um den eigenen Schwerpunkt. Der Spin besitzt eine Quantenzahl $S=0,\frac12,1,\frac32,...$. Die möglichen Beträge sind $|\vec S|=\hbar\sqrt{S(S+1)}$.\\
 
+Nicht nur Elementarteilchen sondern auch Atomkerne besitzen einen Spin. Dieser sogenannte Kernspin wird wie folgt definiert: $|\vec I|=\hbar\sqrt{I(I+1)}$. Die Projektion des Kernspins auf die Quantisierungsachse $z$ ist $I_z=m_I\hbar$ mit $-I\leq m_I\leq +I$, womit es $2I+1$ Einstellmöglichkeiten für $I_z$ gibt.\\
+
+Die in diesem Versuch betrachteten Kerne haben einen Spin $I=\frac12$. Für diese gibt es nun also genau zwei Einstellmöglichkeiten: $m_I=\frac12$ und $m_I=-\frac12$, also parallelen und antiparallelen Spin.
 
 \subsection{Magnetisches Moment}
+Der Spin eines quantenmechanischen Teilchens erzeugt immer ein magnetisches Dipolmoment $\vec\mu$, das kernmagnetische Moment. Es gilt $\vec\mu=\gamma\vec I$, wobei $\gamma=\frac{g_I\mu_k}{\hbar}$ das gyromagnetische Verhältnis ist. $g_I$ ist der sogenannte Kern-g-Faktor, welcher auch in diesem Versuch bestimmt werden soll. Dieser Faktor ist charakteristisch für den jeweiligen Kern. $\mu_k$ ist das Kernmagnetron mit $\mu_k=\frac{e\hbar}{2m_p}$.
 
 \subsection{Zeeman-Effekt und Kernspinresonanz}
-A nucleus with a magnetic moment brought into a magnetic field in z-direction has the Energy $E=-\vec\mu\cdot\vec B=-g_I\mu_km_IB$. This means that the energy states of the nuclei are split up by their nuclear spin. The difference between two neighboring Zeeman states is $\Delta E=g_I\mu_kB$.
+Ein Kern mit einem kernmagnetischen Moment hat in einem magnetischen Feld in z-Richtung die Energie $E==-\vec\mu\cdot\vec B=-g_I\mu_km_IB$. Die Energiezustände des Kerns sind also aufgespalten nach ihrem Kernspin. Dieser Effekt ist der Zeeman-Effekt. Der Abstand zweier benachbarter Zustände ist nun $\Delta E=g_I\mu_k B$.\\
 
-Transitions between these states can occur through spontaneous or induced emission or absorption of photons. The energy which is needed to induce such a transition or is getting free by this transition is exactly the energy difference between the two states. So the photons of a radiation field used to induce transitions need to have the frequency $\nu=\frac{\Delta E}{h}=\frac{g_i\mu_kB}{h}=\frac{\gamma B}{2\pi}$. 
+Übergänge zwischen diesen beiden Zuständen können durch spontane oder induzierte Emission oder Absorption von Photonen auftreten. Die Energie, die dazu benötigt wird oder frei wird, beträgt genau $\Delta E$. Photonen eines Strahlungsfeldes, welches diese Übergänge hervorrufen soll, müssen also die Frequenz $\nu=\frac{\Delta E}{h}=\frac{g_i\mu_kB}{h}=\frac{\gamma B}{2\pi}$ haben.\\
+
+Wenn ein Kern im energetisch niedrigeren Zustand nun ein Photon absorbiert und in einen energetisch höheren Zustand wechselt, also der Spin umklappt, dann gibt das Photon seine Energie an den Kern ab, wodurch das Strahlungsfeld an Intensität verliert. Umgekehrt kann der Kern vom energetisch höheren in den energetisch niedrigeren Zustand wechseln und dabei die Energie $\Delta E$ an ein Photon abgeben. Dadurch wird die Intensität des Strahlungsfeldes wiederum erhöht.\\
+
+Die Energieniveaus des Kerns gehorchen im thermischen Gleichgewicht einer Boltzmann-Verteilung. Also beträgt das Verhältnis der Besetzungszahlen des energetisch höheren zum energetisch niedrigeren Zustandes $\frac{n_{\text{hoch}}}{n_{\text{tief}}}=\exp\left(-\frac{\Delta E}{kT}\right)$ mit der Boltzmann-Konstante $k$ und der Temperatur $T$. Insgesamt bilden sich also immer mehr Teilchen im energetisch niedrigeren als im energetisch höheren Zustand. Deshalb verliert das Strahlungsfeld Energie, welches sich im Versuch als Dämpfung eines elektromagnetischen Schwingkreises zeigt.
+
+\subsection{Relaxation}
+Da mehr Kerne vom energetisch tieferen in den höheren Zustand gehen als umgekehrt, müsste es nun bald genauso viele Kerne im höheren wie im tieferen Zustand geben. Dann würde sich die Zahl der Absorption mit der Zahl der Emissionen decken und es gäbe keine messbare Dämpfung des Schwingkreises mehr.\\
+
+Es gibt allerdings Effekte, die Relaxationsprozesse, welche den Besetzungsunterschied aufrecht erhalten. Dies ist zum Einen die Spin-Gitter-Relaxation, bei welcher die Kerne im energetisch höheren Zustand ihre Energie strahlungslos als thermische Energie an die Molekülstruktur abgeben. Zum Anderen ist dies die Spin-Spin-Relaxation. Dieser Prozess beschreibt das Magnetfeld, welches durch den Spin eines Kerns am Ort eines anderen Kerns erzeugt wird. Das gesamte Magnetfeld am Ort des anderen Kerns ist nun also etwas stärker oder schwächer als das äußere Magnetfeld. Dadurch verschiebt sich die Resonanzfrequenz des Kerns, was zu einer Verbreiterung der Absorptionslinie führt.
+
+\subsection{Hallsonde}
+
+Auf bewegte Elektronen in einem Magnetfeld wirkt die Lorentzkraft. Diese lenkt die Elektronen senkrecht zu ihrer Bewegungsrichtung aus. Dadurch werden die Elektronen in einem stromdurchflossenen Leiter an den Rand dieses Leiters bewegt. Also bildet sich ein elektrisches Feld zwischen den beiden Seiten des Leiters. Die daraus folgende elektrische Kraft bildet ein Kräftegleichgewicht mit der Lorentzkraft. Sie Spannung zwischen den beiden Seiten des Leiters lässt sich nun von außen mit einem Voltmeter messen, dies ist die sogenannte Hallspannung (siehe Abbildung \ref{hallsonde}). Mit $F_{\text{el}}=q\cdot E=q\cdot\frac Ud$ und $F_{\text{Lorentz}}=q\cdot v\cdot B$ gilt nun $U=d\cdot v\cdot B$, womit sich durch Messung der Spannung das Magnetfeld bestimmen lässt. Das hier beschriebene Gerät zur Messung des Magnetfelds nennt sich Hallsonde nach dem Entdecker Edwin Hall \cite{bibhall}.
+
+\gra[0.5]{halleffekt}{Funktionsweise einer Hallsonde \label{hallsonde}\cite{bibhall}}
+
+\subsection{Messung der Kernspinresonanzfrequenz}\label{messung1}
+\gra[0.5]{messprinzip1}{Absorptionsminima am Oszilloskop mit äquidistantem Abstand \label{messprinzip1}\cite{anleitung}}
+
+Zum Messen der Kernspinresonanzfrequenz halten wir die Frequenz des Strahlungsfeldes konstant und variieren das Magnetfeld. Die Verluste im Strahlungsfeld bei Überfahren der Resonanz zeigen sich durch Minima in der Absorptionskurve. Um die Resonanzfrequenz nun bestimmen zu können modulieren wir das B-Feld um einen vermuteten Resonanzwert mit einer Sinus-Kurve. Bei exaktem Treffen des Resonanzwertes sind die Absorptionsminima äquidistant (siehe Abbildung \ref{messprinzip1}). Das B-Feld wird nun so eingestellt, dass die Absorptionsminima äquidistant sind, um die Resonanzfrequenz zu erhalten.
+
+\subsection{Messung der Kernspinresonanzfrequenz mithilfe des Lock-In-Verfahrens}
+\gra[0.5]{messprinzip2}{Differenziertes Absorptionsbild \label{messprinzip2}\cite{anleitung}}
+
+
+Bei der in \ref{messung1} beschriebenen Messung kann der Wert nicht sehr genau eingestellt und gemessen werden. Um eine bessere Messung zu erhalten, benutzen wir in einer Messreihe das Lock-In-Verfahren, durch das wir ein differenziertes Signal erhalten. Dazu modulieren wir das Magnetfeld mit einer Sägezahnkurve, auf die ein Sinussignal kleiner Amplitude und hoher Frequenz aufgesetzt wird (siehe Abbildung \ref{messprinzip2}. Das Absorptionssignal wird in einem sogenannten Synchrondetektor mit einem Referenzsignal multipliziert, durch einen Tiefpassfilter integriert und anschließend verstärkt. So werden Störsignale durch Rauschen oder andere Effekte unterdrückt.\\
+
+Aus den unterschiedlichen zeitlichen Abständen $\Delta t$ der Nulldurchgänge des Absorptions- und Sägezahnsignals bei mehreren Frequenzen kann nun durch Interpolation die Resonanzfrequenz berechnet werden.
 
 
 \newpage
-\section{Experimental Set-Up}
-
-
-\newpage
-\section{Experimental Procedure}
+\section{Versuchsaufbau und -Durchführung}
 
 
 
 \newpage
-\section{Evaluation}
+\section{Auswertung}
 
 
 \newpage
-\section{Summary}
+\section{Zusammenfassung und Diskussion}
 
 
 \newpage
-\section{Attachement}
+\section{Anhang}
 
-\subsection{Tables}
+%\subsection{Tabellen}
 
 %\subsubsection{$\alpha$-Plateau Samarium}
 %\lstinputlisting[language=MATLAB]{Rohdaten/alphaPlateau_Sm.txt}
@@ -135,7 +172,7 @@ Transitions between these states can occur through spontaneous or induced emissi
 %\lstinputlisting[language=MATLAB]{Rohdaten/alpha.m}
 
 \newpage
-\subsection{Lab Book}
+\subsection{Laborheft}
 %\begin{minipage}{\textwidth}
 %\centering
 %\includegraphics[width=0.9\textwidth]{figures/IMG_20151002_141014.jpg}
@@ -162,7 +199,11 @@ Transitions between these states can occur through spontaneous or induced emissi
 %\bibitem{molmasse}
 %  \emph{http://www.convertunits.com/molarmass/<ELEMENTNAME AUF ENGLISCH>}, Stand 28.09.2015
   
+\bibitem{bibhall}
+\emph{http://www.schule-bw.de/unterricht/faecher/physik/online\_material/e\_lehre\_2/teilchenfeld/\\halleffekt.htm}, Stand 15.09.2016
 
+\bibitem{anleitung}
+\emph{http://hacol13.physik.uni-freiburg.de/fp/Versuche/FP1/FP1-8-Kernspinresonanz/Anleitung.pdf}, Stand 15.09.2016
 \end{thebibliography}
 
 \end{document}
