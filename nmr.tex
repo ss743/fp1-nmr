@@ -172,6 +172,72 @@ Anschließend werden die Sägezahnspannung und der Synchrondetektor angeschlosse
 \newpage
 \section{Auswertung}
 
+\subsection{Aufgabe 1: Homogenität des Magnetfeldes}
+
+Zur Überprüfung der Homogenität des Magnetfeldes tragen wir die gemessenen magnetischen Flussdichten über die zugehörigen Positionen auf. Die Fehlerbalken entsprechen hierbei den Ablesefehlern, also: $s_x = 0.5mm$ und $s_y = 0.5mT$.
+
+\gra{Homo_B}{Überprüfung der Homogenität des Magnetfeldes \label{Homo}}
+
+Aus Abbildung \ref{Homo}  erkennen wir, dass das Magnetfeld in einem Bereich von ca. $10mm$ bis $30mm$ einen konstanten Wert von $407$mT einnimmt, die Homogenität ist damit hinreichend überprüft. Den Betrag der magnetischen Flussdichte bestimmen wir damit im relevanten Bereich (d.h. in unserem Arbeitsbereich) zu $B = 407 \pm 0.5 $mT.
+Wir wählen hier den Ablesefehler als Fehler auf den Betrag der magnetischen Flussdichte und keinen fortgepflanzten Mittelwertfehler, da es sich um konstante Werte handelt und durch Bildung eines Mittelwertes keine größere Genauigkeit erreicht wird.  
+
+\subsection{Messmethode 1}
+
+\paragraph{Resonanzfrequenzen}
+\ \\
+Wir haben für die verschiedenen Stoffe folgende Resonanzfrequenzen gemessen:
+
+\begin{itemize}
+	\item Proton im Wasserstoff: $\nu_{res} = 16.82 \pm 0.01$
+	\item Proton in Glycol: $\nu_{res} = 16.85 \pm 0.01$
+	\item $^{19}$F:  $\nu_{res} = 15.94 \pm 0.01$
+	\item Teflon:  $\nu_{res} = 15.95 \pm 0.01$
+\end{itemize}
+
+\paragraph{Proton im Wasserstoff}
+\ \\
+Wir berechnen zunächst das gyromagnetische Verhältnis aus der Resonanzfrequenz. Aus $\nu=\frac{\gamma B}{2\pi}$ ergibt sich das gyromagnetische Verhältnis zu:
+
+\begin{align*}
+\gamma = \frac{2\pi \cdot \nu}{B}
+\end{align*}
+
+Der Fehler berechnet sich mit Gauß'scher Fehlerfortpflanzung wie folgt:
+
+\begin{align*}
+s_{\gamma} = \sqrt{\left(\frac{s_B}{B}^2\right)+\left(\frac{s_\nu}{\nu}^2 \right)}\cdot \gamma
+\end{align*}
+
+Wir erhalten für das Proton in Wasserstoff damit: 
+
+\begin{align*}
+\gamma =  \pm
+\end{align*}
+
+außerdem berechnen wir den gyromagnetischen Faktor $g_I$ der sich wie folgt berechnet: 
+
+\begin{align*}
+g_I = \frac{\nu \cdot h}{\mu_k \cdot B}
+\end{align*}
+
+wobei 
+\begin{itemize}
+	\item $h =  6.626 \cdot 10^-34 Js$
+	\item $\mu_k = 5.05 \cdot 10^-27 J/T$
+\end{itemize}
+
+mit dem Fehler:
+\begin{align*}
+s_{g_I} = \sqrt{\left(\frac{s_B}{B}^2\right)+\left(\frac{s_\nu}{\nu}^2 \right)}\cdot g_I
+\end{align*}
+
+
+\paragraph{Proton in Glykol}
+\ \\
+\paragraph{$^{19}$Fluor}
+\ \\
+\paragraph{Teflon}
+\ \\
 
 \newpage
 \section{Zusammenfassung und Diskussion}
