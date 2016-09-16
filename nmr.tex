@@ -134,9 +134,9 @@ Auf bewegte Elektronen in einem Magnetfeld wirkt die Lorentzkraft. Diese lenkt d
 \subsection{Messung der Kernspinresonanzfrequenz}\label{messung1}
 \gra[0.5]{messprinzip1}{Absorptionsminima am Oszilloskop mit äquidistantem Abstand \label{messprinzip1}\cite{anleitung}}
 
-Zum Messen der Kernspinresonanzfrequenz halten wir die Frequenz des Strahlungsfeldes konstant und variieren das Magnetfeld. Die Verluste im Strahlungsfeld bei Überfahren der Resonanz zeigen sich durch Minima in der Absorptionskurve. Um die Resonanzfrequenz nun bestimmen zu können modulieren wir das B-Feld um einen vermuteten Resonanzwert mit einer Sinus-Kurve. Bei exaktem Treffen des Resonanzwertes sind die Absorptionsminima äquidistant (siehe Abbildung \ref{messprinzip1}). Das B-Feld wird nun so eingestellt, dass die Absorptionsminima äquidistant sind, um die Resonanzfrequenz zu erhalten.
+Zum Messen der Kernspinresonanzfrequenz stellen wir das Strahlungsfeld auf eine vermutete Resonanzfrequenz ein und variieren das Magnetfeld. Die Verluste im Strahlungsfeld bei Überfahren der Resonanz zeigen sich durch Minima in der Absorptionskurve. Um die Resonanzfrequenz nun bestimmen zu können modulieren wir das B-Feld mit einer Sinus-Kurve. Bei exaktem Treffen der Resonanzfrequenz sind die Absorptionsminima äquidistant (siehe Abbildung \ref{messprinzip1}). Die Frequenz wird nun so eingestellt, dass die Absorptionsminima äquidistant sind, um die Resonanzfrequenz zu erhalten.
 
-\subsection{Messung der Kernspinresonanzfrequenz mithilfe des Lock-In-Verfahrens}
+\subsection{Messung der Kernspinresonanzfrequenz mithilfe des Lock-In-Verfahrens}\label{messung2}
 \gra[0.5]{messprinzip2}{Differenziertes Absorptionsbild \label{messprinzip2}\cite{anleitung}}
 
 
@@ -147,6 +147,25 @@ Aus den unterschiedlichen zeitlichen Abständen $\Delta t$ der Nulldurchgänge d
 
 \newpage
 \section{Versuchsaufbau und -Durchführung}
+
+\subsection{Vermessung des Magnetfelds}
+\gra[0.5]{aufbau1}{Schaltbild für die Vermesung des Magnetfelds \label{aufbau1}\cite{anleitung}}
+
+Zu Beginn des Versuchs vermessen wir das Magnetfeld und überprüfen dessen Homogenität. Dafür benutzen wir eine Hallsonde, die wir in die Probenöffnung einführen und nun an verschiedenen Höhen das Magnetfeld messen (siehe Abbildung \ref{aufbau1}).
+
+\subsection{Messung der Resonanzfrequenz}
+
+\gra[0.5]{aufbau2}{Schaltbild zur Messung der Resonanzfrequenz \label{aufbau2}\cite{anleitung}}
+
+Zunächst messen wir die Resonanzfrequenzen für das Proton einmal in Wasserstoff und einmal in Glykol und für $^{19}$F einmal rein und einmal in Teflon. Dazu benutzen wir das in \ref{messung1} beschriebene Verfahren und den in Abbildung \ref{aufbau2} beschriebenen Aufbau.
+
+\subsection{Messung der Resonanzfrequenz mithilfe des Lock-In-Verfahrens}
+
+\graTwo[0.49]{aufbau3}{aufbau4}{Schaltbilder zum Lock-In-Verfahren \label{aufbau3}\cite{anleitung}}
+
+Zur Bestimmung der Resonanzfrequenz mithilfe des Lock-In-Verfahrens (siehe \ref{messung2}) stellen wir zunächst die Frequenz grob auf die Resonanzfrequenz ein, um sie später mithilfe des Lock-In-Verfahrens genauer zu untersuchen. Dazu benutzen wir die im linken Teil von Abbildung \ref{aufbau3} beschriebene Schaltung.\\
+
+Anschließend werden die Sägezahnspannung und der Synchrondetektor angeschlossen (siehe Abbildung \ref{aufbau3}) und die Frequenz der Sinusspannung erhöht, während ihre Amplitude verkleinert wird. Nun wird mithilfe des Lock-In-Verfahrens die Resonanzfrequenz des Protons in Wasserstoff genauer vermessen.
 
 
 
@@ -160,6 +179,49 @@ Aus den unterschiedlichen zeitlichen Abständen $\Delta t$ der Nulldurchgänge d
 
 \newpage
 \section{Anhang}
+
+\subsection{Grafiken}
+\subsubsection{Messmethode 1}
+
+\begin{minipage}[h!]{\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{data/HHH01.PNG}\hskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH02.PNG}\vskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH03.PNG}\hskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH04.PNG}
+	\captionof{figure}{Bilder der Resonanzfrequenzen von a) Proton im Wasserstoff, b) Proton in Glykol, c) Fluor, d) Fluor in Teflon}
+\end{minipage}
+\vskip 30 pt
+
+\subsection{Messmethode 2}
+
+\begin{minipage}[h!]{\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{data/HHH05.PNG}\hskip 10 pt
+	\captionof{figure}{Grobeinstellung der Resonanzfrequenz vom Proton im Wasserstoff}
+\end{minipage}
+\vskip 30 pt
+
+\begin{minipage}[h!]{\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{data/HHH06.PNG}\hskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH07.PNG}\vskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH08.PNG}\hskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH09.PNG}\vskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH10.PNG}\hskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH11.PNG}\vskip 10 pt
+	\captionof{figure}{Bilder der differenzierten Absorptionskurven über dem Sägezahnsignal}
+\end{minipage}
+\begin{minipage}[h!]{\textwidth}
+	\centering
+	\includegraphics[width=0.4\textwidth]{data/HHH12.PNG}\hskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH13.PNG}\vskip 10 pt	
+	\includegraphics[width=0.4\textwidth]{data/HHH14.PNG}\hskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH15.PNG}\vskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH16.PNG}\hskip 10 pt
+	\includegraphics[width=0.4\textwidth]{data/HHH17.PNG}\vskip 10 pt
+	\captionof{figure}{Bilder der differenzierten Absorptionskurven über dem Sägezahnsignal}
+\end{minipage}
 
 %\subsection{Tabellen}
 
