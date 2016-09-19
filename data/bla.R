@@ -1,5 +1,3 @@
-setwd("C:/Users/Saskia/Documents/Physik/FP/fp1-nmr/data")
-
 library("Hmisc")
 library("plotrix")
 x <- c(0.3, 1.7, 2.0, 0.3, 0.2, -0.2, -1.1, -1.3, -1.6) *20
