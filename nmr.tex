@@ -151,7 +151,7 @@ Aus den unterschiedlichen zeitlichen Abständen $\Delta t$ der Nulldurchgänge d
 \section{Versuchsaufbau und -Durchführung}
 
 \subsection{Vermessung des Magnetfelds}
-\gra[0.5]{aufbau1}{Schaltbild für die Vermesung des Magnetfelds \label{aufbau1}\cite{anleitung}}
+\gra[0.5]{aufbau1}{Schaltbild für die Vermessung des Magnetfelds \label{aufbau1}\cite{anleitung}}
 
 Zu Beginn des Versuchs vermessen wir das Magnetfeld und überprüfen dessen Homogenität. Dafür benutzen wir eine Hallsonde, die wir in die Probenöffnung einführen und nun an verschiedenen Höhen das Magnetfeld messen (siehe Abbildung \ref{aufbau1}).
 
@@ -191,7 +191,7 @@ Wir haben für die verschiedenen Stoffe folgende Resonanzfrequenzen gemessen:
 
 \begin{itemize}
 	\item Proton im Wasserstoff: $\nu_{res} = 16.82 \pm 0.01$
-	\item Proton in Glycol: $\nu_{res} = 16.85 \pm 0.01$
+	\item Proton in Glykol: $\nu_{res} = 16.85 \pm 0.01$
 	\item $^{19}$F:  $\nu_{res} = 15.94 \pm 0.01$
 	\item Teflon:  $\nu_{res} = 15.95 \pm 0.01$
 \end{itemize}
@@ -208,7 +208,7 @@ Wir berechnen zunächst das gyromagnetische Verhältnis aus der Resonanzfrequenz
 Der Fehler berechnet sich mit Gauß'scher Fehlerfortpflanzung wie folgt:
 
 \begin{align*}
-s_{\gamma} = \sqrt{\left(\frac{s_B}{B}\right)^2+\left(\frac{s_\nu}{\nu}^2 \right)}\cdot \gamma
+s_{\gamma} = \sqrt{\left(\frac{s_B}{B}\right)^2+\left(\frac{s_\nu}{\nu} \right)^2}\cdot \gamma
 \end{align*}
 
 Wir erhalten für das Proton in Wasserstoff damit: 
@@ -231,7 +231,7 @@ wobei
 
 mit dem Fehler:
 \begin{align*}
-s_{g_I} = \sqrt{\left(\frac{s_B}{B}^2\right)+\left(\frac{s_\nu}{\nu}^2 \right)}\cdot g_I
+s_{g_I} = \sqrt{\left(\frac{s_B}{B}\right)^2+\left(\frac{s_\nu}{\nu} \right)^2}\cdot g_I
 \end{align*}
 
 Wir erhalten:
@@ -378,7 +378,7 @@ g_I = 5.629  \pm 0.007
 \end{minipage}
 \vskip 30 pt
 
-\subsection{Messmethode 2} \label{FUCKTHISSHIT}
+\subsubsection{Messmethode 2} \label{FUCKTHISSHIT}
 
 \begin{minipage}[h!]{\textwidth}
 	\centering
@@ -396,7 +396,7 @@ g_I = 5.629  \pm 0.007
 	\includegraphics[width=0.4\textwidth]{data/HHH10.PNG}\hskip 10 pt
 	\includegraphics[width=0.4\textwidth]{data/HHH11.PNG}\vskip 10 pt
 	\captionof{figure}{Bilder der differenzierten Absorptionskurven über dem Sägezahnsignal}
-\end{minipage}
+\end{minipage}\newpage
 \begin{minipage}[h!]{\textwidth}
 	\centering
 	\includegraphics[width=0.4\textwidth]{data/HHH12.PNG}\hskip 10 pt
@@ -407,6 +407,9 @@ g_I = 5.629  \pm 0.007
 	\includegraphics[width=0.4\textwidth]{data/HHH17.PNG}\vskip 10 pt
 	\captionof{figure}{Bilder der differenzierten Absorptionskurven über dem Sägezahnsignal}
 \end{minipage}
+\newpage
+\subsection{Programmcode}
+\lstinputlisting[language=R]{data/bla.R}
 
 %\subsection{Tabellen}
 
