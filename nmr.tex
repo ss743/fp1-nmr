@@ -185,7 +185,7 @@ Wir wählen hier den Ablesefehler als Fehler auf den Betrag der magnetischen Flu
 
 \subsection{Messmethode 1}
 
-\paragraph{Resonanzfrequenzen}
+\subsubsection{Resonanzfrequenzen}
 \ \\
 Wir haben für die verschiedenen Stoffe folgende Resonanzfrequenzen gemessen:
 
@@ -196,7 +196,7 @@ Wir haben für die verschiedenen Stoffe folgende Resonanzfrequenzen gemessen:
 	\item Teflon:  $\nu_{res} = 15.95 \pm 0.01$
 \end{itemize}
 
-\paragraph{Proton im Wasserstoff}
+\subsubsection{Proton im Wasserstoff} \label{Rechnung}
 \ \\
 Wir berechnen zunächst das gyromagnetische Verhältnis aus der Resonanzfrequenz. Aus $\nu=\frac{\gamma B}{2\pi}$ ergibt sich das gyromagnetische Verhältnis zu:
 
@@ -233,20 +233,109 @@ mit dem Fehler:
 s_{g_I} = \sqrt{\left(\frac{s_B}{B}^2\right)+\left(\frac{s_\nu}{\nu}^2 \right)}\cdot g_I
 \end{align*}
 
+Wir erhalten:
 
-\paragraph{Proton in Glykol}
-\ \\
-\paragraph{$^{19}$Fluor}
-\ \\
-\paragraph{Teflon}
+\begin{align*}
+g_I =   \pm
+\end{align*}
+\subsubsection{Proton in Glykol}
 \ \\
 
+Analog zu \ref{Rechnung} berechnen wir hier wieder das gyromagnetische Verhältnis und den gyromagnetischen Faktor aus gemessener Resonanzfrequenz und Magnetfeld. Wir erhalten:
+
+\begin{align*}
+\gamma =  \pm
+\end{align*}
+
+\begin{align*}
+g_I =   \pm
+\end{align*}
+
+\subsubsection{$^{19}$Fluor} \label{MEINEXISTEINARSCH}
+\ \\
+
+Auch für Fluor berechnen wir zunächst analog zu \ref{Rechnung} das gyromagnetische Verhältnis und den gyromagnetischen Faktor mit folgendem Ergebnis:
+
+\begin{align*}
+\gamma =  \pm
+\end{align*}
+
+\begin{align*}
+g_I =   \pm
+\end{align*}
+
+Zusätzlich wollen wir hier auch das magnetische Moment ermitteln, das sich wie folgt berechnet:
+
+\begin{align*}
+\mu = g_I \cdot \mu_k \cdot m_I
+\end{align*}
+
+Mit der Unsicherheit:
+
+\begin{align*}
+s_\mu = \mu_k \cdot m_I \cdot s_{g_I}
+\end{align*}
+
+Wir erhalten folgendes Ergebnis:
+
+\begin{align*}
+\mu =  \pm
+\end{align*}
+\subsubsection{Teflon}
+\ \\
+Die Auswertung von Teflon geht analog zu \ref{MEINEXISTEINARSCH} vor.
+
+Wir erhalten folgende Ergebnisse:
+
+\begin{align*}
+\gamma =  \pm
+\end{align*}
+
+\begin{align*}
+g_I =   \pm
+\end{align*}
+
+\begin{align*}
+\mu =  \pm
+\end{align*}
 \newpage
+
+\subsection{Messmethode 2}
+Beim groben Einstellen der Resonanzfrequenz stellten wir fest, dass sich das Magnetfeld deutlich verändert hat. Bei erneutem Messen ermittelten wir folgenden Betrag für die magnetische Flussdichte mit dem wir in diesem Abschnitt rechnen werden:
+
+\begin{align*}
+B = 388 mT
+\end{align*}
+
+
+Aus den aufgenommenen Oszilloskopbildern (siehe \ref{FUCKTHISSHIT}) ermitteln wir den Zeitabstand $\Delta t$ und. Als Fehlerbalken tragen wir einen abgeschätzten Ablesefehler der Zeitunterschiede von $0.1 div$ d.h. $2s$. Der Fehler auf die Frequenz ist gegenüber dem Zeitfehler vernachlässigbar.
+Wir erhalten folgenden Ergebnis:
+
+
+
+%\gra{}{}
+
+Aus dem Achsenabschnitt ergibt sich die Resonanzfrequenz mit zugehörigem statistischem Fehler:
+
+\begin{align*}
+\nu_res = 16.647   \pm 0.007
+\end{align*}   
+
+Hieraus berechnen wir analog zu \ref{Rechnung} wieder das gyromagnetischen Verhältnis $\gamma$ und den gyromagnetischen Faktor $g_I$:
+
+\begin{align*}
+\gamma =  \pm
+\end{align*}
+
+\begin{align*}
+g_I =   \pm
+\end{align*}
+
 \section{Zusammenfassung und Diskussion}
 
 
 \newpage
-\section{Anhang}
+\section{Anhang} 
 
 \subsection{Grafiken}
 \subsubsection{Messmethode 1}
@@ -261,7 +350,7 @@ s_{g_I} = \sqrt{\left(\frac{s_B}{B}^2\right)+\left(\frac{s_\nu}{\nu}^2 \right)}\
 \end{minipage}
 \vskip 30 pt
 
-\subsection{Messmethode 2}
+\subsection{Messmethode 2} \label{FUCKTHISSHIT}
 
 \begin{minipage}[h!]{\textwidth}
 	\centering
