@@ -9,11 +9,11 @@ erry <- c(0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001)
 
 
 plot(x, y, type="p", xlim=c(-40, 50), ylim=c(16.5, 16.8), xlab = "Zeitunterschied/s", ylab = "Resonanzfrequenz/MHz", pch=4)
-plotCI (x, y, uiw=erry , err=" y " , pch=4, cex=0.6 ,add=TRUE)
-plotCI (x, y, uiw=errx , err=" x " , pch=4, cex=0.6 ,add=TRUE)
+plotCI (x, y, uiw=erry , err="y" , pch=4, cex=0.6 ,add=TRUE)
+plotCI (x, y, uiw=errx , err="x" , pch=4, cex=0.6 ,add=TRUE)
 
 
-#text(x=50, y=800, "y=(8.7+-0.4)channel/keV*x-(464+-24)channel", cex=0.8)
+text(x=-10, y=16.75, "y=(0.0031+-0.0003)MHz/s*x+(16.647-0.007)MHz", cex=0.8)
 fm1 <- lm(y ~ x)
 summary(fm1)
 abline(fm1, col = "red")
