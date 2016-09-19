@@ -306,10 +306,10 @@ g_I = 5.142  \pm 0.006
 \newpage
 
 \subsection{Messmethode 2}
-Beim groben Einstellen der Resonanzfrequenz stellten wir fest, dass sich das Magnetfeld deutlich verändert hat. Bei erneutem Messen ermittelten wir folgenden Betrag für die magnetische Flussdichte mit dem wir in diesem Abschnitt rechnen werden:
+Beim groben Einstellen der Resonanzfrequenz stellten wir fest, dass sich das Magnetfeld deutlich verändert hat. Bei erneutem Messen ermittelten wir folgenden Betrag für die magnetische Flussdichte mit dem wir in diesem Abschnitt rechnen werden: \label{cookiemonster}
 
 \begin{align*}
-B = 388 mT
+B = 388 mT	
 \end{align*}
 
 
@@ -344,21 +344,23 @@ g_I = 5.629  \pm 0.007
 	
 	{\centering{}
 		\begin{tabular}{c||c|c|c|c}
-							&$\gamma /(10^{8}\frac1{Ts})$ & $g_I$ & $\mu/(10^{-26}\frac JT)$ & Literaturwert $g_I$	\\ \hline\hline
+							&$\gamma /(10^{8}\frac1{Ts})$ & $g_I$ & $\mu/(10^{-26}\frac JT)$ & Literaturwert $g_I$	\cite{Babykatze}\\ \hline\hline
 			\textbf{Messmethode 1 }	 &&&&			\\ \hline\hline
 			Proton in Wasserstoff	& $2.597\pm0.004$	& $5.422\pm0.007	$	    &  	& $5.5869$\\ \hline
 			Proton in Glykol	& $2.601\pm0.004$	& $5.432\pm0.007	$	    &  	& $5.5896$\\ \hline
 			$^{19}$F & 	$2.461\pm0.003$	& $5.139\pm0.006	$	    & $1.2975\pm0.0016$	& $5.255$       \\ \hline
 			Teflon & $2.462\pm0.003$ & $5.142\pm0.006$ & $1.2983\pm0.0016$ & 5.255                                            \\ \hline
 			\textbf{Messmethode 2 }	 &&&&			\\ \hline\hline
-			Proton in Wasserstoff & $2.629\pm0.004$ & $5.629\pm0.007$ &&$5.869$
+			Proton in Wasserstoff & $2.629\pm0.004$ & $5.629\pm0.007$ &&$5.5869$
 		\end{tabular}\\}
 	
-	\caption{Übersicht der Ergebnisse}
+	\caption{Übersicht der Ergebnisse\label{WeWantCarstenBack}}
 \end{table}
 
 \subsection{Diskussion}
-
+ Wie in Tabelle \ref{WeWantCarstenBack} zu sehen ist, weichen unsere Werte für den Kern-g-Faktor leicht von den Literaturwerten ab. \\
+ Die nach Messmethode 1 berechneten Werte weisen alle eine Abweichung nach unten auf. Dies liegt an der zeitlichen Abnahme des Magnetfelds, welche wir beobachten konnten. Durch eine zu hohe Messung des Magnetfelds (siehe \ref{cookiemonster}) erhielten wir ein zu kleines Ergebnis für den g-Faktor und das gyromagnetische Verhältnis. Die Werte für das gyromagnetische Verhältnis stimmen jeweils für das Proton in Messmethode 1 und für Fluor miteinander innerhalb des Fehlers überein.\\
+ Mit der Messmethode 2 erhielten wir einen deutlich näher am Literaturwert liegenden Wert für den Kern-g-Faktor, der allerdings auch noch einige Standardabweichungen vom Literaturwert entfernt liegt. Dies liegt vermutlich daran, dass wir unseren Fehler zu klein abgeschätzt haben. Außerdem mussten wir für die Messung auf die ungenaue Methode des direkten Ablesens auf dem Bild zurückgreifen, da das Oszilloskop in den CSV-Dateien nur die Daten des ersten Kanals (die Absorptionskurve) gespeichert hat und nicht die Daten des zweiten Kanals (die Sägezahnspannung). Diese Ablesemethode trägt natürlich zu einer größeren Abweichung bei. Außerdem können wir auch weitere Schwankungen des Magnetfelds nicht ausschließen. Dass wir hier nun mit dem als zweites gemessenen Wert für das Magnetfeld gerechnet haben, erklärt die Abweichung zu den Werten für das Protons aus der ersten Messmethode.
 
 \newpage
 \section{Anhang} 
