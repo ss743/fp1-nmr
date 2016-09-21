@@ -93,11 +93,28 @@
 
 %Schreiben----------------------------------------------------------------------------------------------------------
 \pagenumbering{arabic} %verstecke Seitenzahl
-\section{Einleitung}
+\section{Abstract}
 
 In diesem Versuch untersuchen wir Kernspinresonanz. Dieser Effekt beruht auf dem Zeeman-Effekt und beschreibt das Umklappen von Kernspins in einem Magnetfeld unter Absorption oder Emission von Photonen. Wir benutzen die Kernspinresonanz um das gyromagnetische Verhältnis des Protons einmal in Wasserstoff und einmal in Glykol zu bestimmen. Anschließend messen wir das kernmagnetische Moment von $^{19}$F und die Protonenresonanzfrequenz von Wasserstoff. Außerdem untersuchen wir das in diesem Versuch benutzte magnetische Feld mit einer Hall-Sonde, um dessen Homogenität zu bestätigen.
+Die Homogenität des Magnetfeldes konnten wir für einen Zeitpunkt bestätigen, allerdings stellten wir Schwankungen des Magnetfeldes über die Zeitdauer des Experimentes fest, die die Ergebnisse des Experiments beeinflussten. Für den gyromagnetischen Faktor erhielten wir folgende Ergebnisse:
 
 
+\begin{table}[h!]
+	
+	{\centering{}
+		\begin{tabular}{c||c}
+			& $g_I$ 	\\ \hline\hline
+			\textbf{Messmethode 1 }	 &			\\ \hline\hline
+			Proton in Wasserstoff	& $5.422\pm0.007	$ \\ \hline
+			Proton in Glykol		& $5.432\pm0.007	$ \\ \hline
+			$^{19}$F	& $5.139\pm0.006	$	         \\ \hline
+			Teflon  & $5.142\pm0.006$                  \\  \hline
+			\textbf{Messmethode 2 }	 &			\\ \hline\hline
+			Proton in Wasserstoff & $5.629\pm0.007$ 
+		\end{tabular}\\}
+	
+	\caption{Übersicht der Ergebnisse für die gyrmomagnetischen Faktoren \label{WeWantCarstenBack1}}
+\end{table}
 \newpage
 \section{Theoretische Grundlagen}
 In diesem Kapitel haben wir uns weitgehend an \cite{anleitung} orientiert.
@@ -110,10 +127,10 @@ Der Spin eines Kerns setzt sich aus den Spins seiner Nukleonen zusammen. Aufgrun
 
 Die in diesem Versuch betrachteten Kerne, das Proton und der $^{19}$F-Kern mit 9 Protonen und 10 Neutronen haben also einen Spin $I=\frac12$. Für diese gibt es nun also genau zwei Einstellmöglichkeiten: $m_I=\frac12$ und $m_I=-\frac12$, also parallelen und antiparallelen Spin.
 
-\subsection{Magnetisches Moment}
+\subsection{Magnetisches Moment}\label{Mag}
 Der Spin eines quantenmechanischen Teilchens erzeugt immer ein magnetisches Dipolmoment $\vec\mu$, das kernmagnetische Moment. Es gilt $\vec\mu=\gamma\vec I$, wobei $\gamma=\frac{g_I\mu_k}{\hbar}$ das gyromagnetische Verhältnis ist. $g_I$ ist der sogenannte Kern-g-Faktor, welcher auch in diesem Versuch bestimmt werden soll. Dieser Faktor ist charakteristisch für den jeweiligen Kern. $\mu_k$ ist das Kernmagnetron mit $\mu_k=\frac{e\hbar}{2m_p}$.
 
-\subsection{Zeeman-Effekt und Kernspinresonanz}
+\subsection{Zeeman-Effekt und Kernspinresonanz} \label{Zeemann}
 Ein Kern mit einem kernmagnetischen Moment hat in einem magnetischen Feld in z-Richtung die Energie $E==-\vec\mu\cdot\vec B=-g_I\mu_km_IB$. Die Energiezustände des Kerns sind also aufgespalten nach ihrem Kernspin. Dieser Effekt ist der Zeeman-Effekt. Der Abstand zweier benachbarter Zustände ist nun $\Delta E=g_I\mu_k B$.\\
 
 Übergänge zwischen diesen beiden Zuständen können durch spontane oder induzierte Emission oder Absorption von Photonen auftreten. Die Energie, die dazu benötigt wird oder frei wird, beträgt genau $\Delta E$. Photonen eines Strahlungsfeldes, welches diese Übergänge hervorrufen soll, müssen also die Frequenz $\nu=\frac{\Delta E}{h}=\frac{g_i\mu_kB}{h}=\frac{\gamma B}{2\pi}$ haben.\\
@@ -155,13 +172,13 @@ Aus den unterschiedlichen zeitlichen Abständen $\Delta t$ der Nulldurchgänge d
 
 Zu Beginn des Versuchs vermessen wir das Magnetfeld und überprüfen dessen Homogenität. Dafür benutzen wir eine Hallsonde, die wir in die Probenöffnung einführen und nun an verschiedenen Höhen das Magnetfeld messen (siehe Abbildung \ref{aufbau1}).
 
-\subsection{Messung der Resonanzfrequenz}
+\subsection{Messung der Resonanzfrequenz} \label{Mess1}
 
 \gra[0.5]{aufbau2}{Schaltbild zur Messung der Resonanzfrequenz \label{aufbau2}\cite{anleitung}}
 
 Zunächst messen wir die Resonanzfrequenzen für das Proton einmal in Wasserstoff und einmal in Glykol und für $^{19}$F einmal rein und einmal in Teflon. Dazu benutzen wir das in \ref{messung1} beschriebene Verfahren und den in Abbildung \ref{aufbau2} beschriebenen Aufbau.
 
-\subsection{Messung der Resonanzfrequenz mithilfe des Lock-In-Verfahrens}
+\subsection{Messung der Resonanzfrequenz mithilfe des Lock-In-Verfahrens}\label{Lock}
 
 \graTwo[0.49]{aufbau3}{aufbau4}{Schaltbilder zum Lock-In-Verfahren \label{aufbau3}\cite{anleitung}}
 
@@ -187,7 +204,7 @@ Wir wählen hier den Ablesefehler als Fehler auf den Betrag der magnetischen Flu
 
 \subsubsection{Resonanzfrequenzen}
 \ \\
-Wir haben für die verschiedenen Stoffe folgende Resonanzfrequenzen gemessen:
+Wir haben für die verschiedenen Stoffe folgende Resonanzfrequenzen gemessen (siehe \ref{Mess1}):
 
 \begin{itemize}
 	\item Proton im Wasserstoff: $\nu_{res} = 16.82 \pm 0.01$
@@ -199,7 +216,7 @@ Wir haben für die verschiedenen Stoffe folgende Resonanzfrequenzen gemessen:
 Die Unsicherheit entspricht dabei nicht der Ablesegenauigkeit sondern ergibt sich aus unserer Abschätzung wie genau eine Resonanzfrequenz einzustellen ist. Diese schätzen wir deutlich größer ein, da zum einen die Anzeige des Geräts schwankt und zum anderen äquidistante Abstände nur bis zu einer gewissen Genauigkeit.
 \subsubsection{Proton im Wasserstoff} \label{Rechnung}
 \ \\
-Wir berechnen zunächst das gyromagnetische Verhältnis aus der Resonanzfrequenz. Aus $\nu=\frac{\gamma B}{2\pi}$ ergibt sich das gyromagnetische Verhältnis zu:
+Wir berechnen zunächst das gyromagnetische Verhältnis aus der Resonanzfrequenz (siehe \ref{Zeemann}). Aus $\nu=\frac{\gamma B}{2\pi}$ ergibt sich das gyromagnetische Verhältnis zu:
 
 \begin{align*}
 \gamma = \frac{2\pi \cdot \nu}{B}
@@ -217,8 +234,7 @@ Wir erhalten für das Proton in Wasserstoff damit:
 \gamma = (2.597\pm 0.004) \cdot 10^8 \frac{1}{Ts}
 \end{align*}
 
-außerdem berechnen wir den gyromagnetischen Faktor $g_I$ der sich wie folgt berechnet: 
-
+außerdem berechnen wir den gyromagnetischen Faktor $g_I$ (siehe \ref{Zeemann}) der sich wie folgt berechnet: 
 \begin{align*}
 g_I = \frac{\nu \cdot h}{\mu_k \cdot B}
 \end{align*}
@@ -265,7 +281,7 @@ Auch für Fluor berechnen wir zunächst analog zu \ref{Rechnung} das gyromagneti
 g_I = 5.139  \pm 0.006
 \end{align*}
 
-Zusätzlich wollen wir hier auch das magnetische Moment ermitteln, das sich wie folgt berechnet:
+Zusätzlich wollen wir hier auch das magnetische Moment ermitteln, das sich wie folgt berechnet (siehe \ref{Mag}):
 
 \begin{align*}
 \mu = g_I \cdot \mu_k \cdot m_I
@@ -319,10 +335,10 @@ Aus den aufgenommenen Oszilloskopbildern (siehe \ref{FUCKTHISSHIT}) ermitteln wi
 
 \gra{Rplot}{Messmethode 2: Berechnung der Resonanzfrequenz \label{Tristanwantsatiger}} 
 
-Aus dem Achsenabschnitt (siehe \ref{Tristanwantsatiger})  ergibt sich die Resonanzfrequenz mit zugehörigem statistischem Fehler:
+Aus dem Achsenabschnitt (siehe Abbildung \ref{Tristanwantsatiger})  ergibt sich die Resonanzfrequenz mit zugehörigem statistischem Fehler (siehe \ref{Lock}):
 
 \begin{align*}
-\nu_res = 16.647   \pm 0.007
+\nu_{res} = 16.647   \pm 0.007
 \end{align*}   
 
 Hieraus berechnen wir analog zu \ref{Rechnung} wieder das gyromagnetischen Verhältnis $\gamma$ und den gyromagnetischen Faktor $g_I$:
